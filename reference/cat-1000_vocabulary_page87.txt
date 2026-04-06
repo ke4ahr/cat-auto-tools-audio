@@ -1,0 +1,79 @@
+
+Severe........... 783   Verify........... 882
+Short............ 784   Version.......... 883
+                        Victor........... 884   Time Variables
+Showers.......... 785   Volts............ 885   Time of Day...... 100
+Shut............. 786   W                       Day of Week...... 101
+Side............. 787                           Day and Month.... 102
+Sierra........... 788   W................ 890   Salutation........103
+Sleet............ 789   Wait............. 891
+Slow............. 790   Warning.......... 892   Weather Variables
+Snow............. 791   Watch............ 893   Temperature In....104
+South............ 792   Watts............ 894   Temperature Out...105
+Speed............ 793   Way.............. 895   Wind Information..106
+Squawk........... 794   Weather.......... 896   Temperature Stats.107
+Star............. 795   Wednesday........ 897   Rain Fall Rate....108
+Start............ 796   Week............. 898
+Stop............. 797   Weekday.......... 899   User Function Control
+Storm............ 798   Welcome.......... 900   UF #1 OFF........ 111
+Sunday........... 799   Well Done........ 901   UF #1 ON......... 112
+Switch........... 800   West............. 902   UF #1 MON........ 113
+System........... 801   What............. 903   UF #2 OFF........ 114
+S (plural)....... 802   Whiskey.......... 904   UF #2 ON......... 115
+                        Will............. 905   UF #2 MON........ 116
+T                       Wind............. 906   UF #3 OFF........ 117
+T................ 820   Windows.......... 907   UF #3 ON......... 118
+Tango............ 821   With............. 908   UF #3 MON........ 119
+Target........... 822   Wrong............ 909   UF #4 OFF........ 120
+Telephone........ 823   X                       UF #4 ON......... 121
+Temperature...... 824
+Terminal......... 825   X................ 920   UF #4 MON........ 122
+Test............. 826   X-Ray............ 921   UF #5 OFF........ 123
+                        Y                       UF #5 ON......... 124
+Than............. 827                           UF #5 MON........ 125
+Thank-You........ 828   Y................ 930   UF #6 OFF........ 126
+That............. 829   Yankee........... 931   UF #6 ON......... 127
+The(shortE)...... 830   Year............. 932   UF #6 MON........ 128
+The(longE)....... 831   Yellow........... 933   UF #7 OFF........ 129
+Then............. 832   Yes.............. 934   UF #7 ON......... 130
+This............. 833   Yesterday........ 935   UF #7 MON........ 131
+This-is.......... 834   You.............. 936   UF #8 OFF........ 132
+Thousand......... 835   Your............. 937   UF #8 ON......... 133
+Thunderstorms.... 836   Z                       UF #8 MON........ 134
+Thursday......... 837
+Time............. 838   Z................ 950   500 mSEC Delay... 135
+Timer............ 839   Zed.............. 951
+Today............ 840   Zero............. 952   DVR Tracks
+Tomorrow......... 841   Zone............. 953   Track #1......... 140
+Tonight.......... 842   Zulu............. 954   Track #2......... 141
+                                                Track #3......... 142
+Tornado.......... 843
+Tower............ 844   Pause 1.......... 960   Track #4......... 143
+Traffic.......... 845   Pause 2.......... 961   Track #5......... 144
+Transmit......... 846   Pause 3.......... 962   Track #6......... 145
+Transmitter...... 847   Pause 4.......... 963   Track #7......... 146
+                                                Track #8......... 147
+Try.............. 848
+Tuesday.......... 849   Sound Effects           Track #9......... 148
+                        Chime 1.......... 964   Track #10........ 149
+Turn............. 850   Chime 2.......... 965   Track #11........ 150
+Type............. 851   Chime 3.......... 966   Track #12........ 151
+U                       Gunshot.......... 967   Track #13........ 152
+U................ 870   Laser............ 968   Track #14........ 153
+Uniform.......... 871   Phaser........... 969   Track #15........ 154
+Unit............. 872   Tic.............. 970   Track #16........ 155
+Unlimited........ 873   Toc.............. 971
+Until............ 874   Laughter......... 972   Courtesy Tones
+Up............... 875                           Tone #0.......... 160
+Use(noun)........ 876   Female                  Tone #1.......... 161
+Use(verb)........ 877   Good Morning..... 980   Tone #2.......... 162
+V                       Good Afternoon... 981   Tone #3.......... 163
+                        Good Evening..... 982   Tone #4.......... 164
+V................ 880                           Tone #5.......... 165
+Variable......... 881
+
+
+
+
+                                11-3
+

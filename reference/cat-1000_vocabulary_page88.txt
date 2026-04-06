@@ -1,0 +1,40 @@
+
+Tone #6.......... 166
+Tone #7.......... 167
+Tone #8.......... 168
+Tone #9.......... 169
+CW Identifier
+CW ID Buffer #1.. 170
+CW ID Buffer #2.. 171
+Execute Macro
+Macro #2......... 172
+Macro #3......... 173
+Macro #4......... 174
+Macro #5......... 175
+Macro #6......... 176
+Macro #7......... 177
+Macro #8......... 178
+Macro #9......... 179
+DTMF Tones
+DTMF Digit 0..... 180
+DTMF Digit 1..... 181
+DTMF Digit 2..... 182
+DTMF Digit 3..... 183
+DTMF Digit 4..... 184
+DTMF Digit 5..... 185
+DTMF Digit 6..... 186
+DTMF Digit 7..... 187
+DTMF Digit 8..... 188
+DTMF Digit 9..... 189
+DTMF Digit *..... 190
+DTMF Digit #..... 191
+DTMF Digit A..... 192
+DTMF Digit B..... 193
+DTMF Digit C..... 194
+DTMF Digit D..... 195
+
+
+
+
+                        11-4
+
