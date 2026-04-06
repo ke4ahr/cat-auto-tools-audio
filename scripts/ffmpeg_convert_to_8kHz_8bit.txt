@@ -1,0 +1,10 @@
+
+ffmpeg -i input.wav -acodec pcm_u8 -ar 8000 -ac 1 output.wav
+
+Command breakdown:
+
+    -i input.wav: Your source file.
+    -acodec pcm_u8: Sets the output to unsigned 8-bit PCM (standard for 8-bit WAV).
+    -ar 8000: Sets the sampling rate to 8000 Hz.
+    -ac 1: Ensures the output is mono.
+

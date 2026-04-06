@@ -1,0 +1,9 @@
+For PowerShell:
+
+Explanation of SoX Parameters used:
+
+    -r 8000: Resamples the audio to 8000 Hz (8 kHz).
+    -c 1: Mixes down any multi-channel audio (like stereo) into a single mono channel.
+    -b 8: Sets the output bit depth to 8 bits.
+    -e u-law: Specifies the CCITT u-law encoding, commonly used for telephony and IVR systems.
+    "converted/$file.Name": Places the processed files into a subfolder to prevent overwriting your original high-quality source files.
