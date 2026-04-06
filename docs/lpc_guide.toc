@@ -1,0 +1,38 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Voice EPROM Layout}{2}{section.2}%
+\contentsline {section}{\numberline {3}Phrase Index Format}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Entry structure}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Group organisation}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Dispatch calling convention}{4}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Phrase Boundary Derivation}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}End addresses are not stored}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Algorithm}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Shared clips}{5}{subsection.4.3}%
+\contentsline {section}{\numberline {5}TMS5220 LPC Bit-Stream Format}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Bit packing direction}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Frame types}{6}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}STOP and Silent frames (4 bits)}{6}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Voiced frame (50 bits)}{6}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Unvoiced frame (29 bits)}{6}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Repeat frame (11 bits)}{6}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.3}Parameter field summary}{7}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Energy table}{7}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Parsing decision tree}{7}{subsection.5.5}%
+\contentsline {section}{\numberline {6}CAT-1000 Speech Subsystem}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Speech ISR and I/O port}{8}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Discovery Results}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Phrase length distribution}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Shared clips}{10}{subsection.7.2}%
+\contentsline {section}{\numberline {8}\texttt {eprom\_scout.py} Algorithm Overview}{10}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Forward-pointing constraint}{10}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Dominant speech region}{11}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Speech port identification}{11}{subsection.8.3}%
+\contentsline {section}{\numberline {9}CAT-310DX Word Dispatch Architecture}{11}{section.9}%
+\contentsline {subsection}{\numberline {9.1}EPROM Layout}{11}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Dispatch Table Format}{11}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Sequence Numbering}{12}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Clip Boundary Derivation}{12}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Extraction Workflow}{12}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Cross-Device Checksum Correlation}{12}{subsection.9.6}%
+\contentsline {section}{References}{13}{section*.21}%
+\contentsline {section}{Glossary}{13}{section*.23}%

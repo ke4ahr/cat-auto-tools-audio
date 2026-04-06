@@ -1,0 +1,84 @@
+.TH CAT-310DX_RENAME_CLIPS 1 "2026-04-05" "CAT-310DX Tools 1.1.0" "User Commands"
+.SH NAME
+cat-310dx_rename_clips \- rename CAT-310DX LPC/WAV clips using a correlation map
+.SH SYNOPSIS
+.B python3 cat-310dx_rename_clips.py
+[\fB\-\-map\fR \fIFILE\fR]
+[\fB\-\-dir\fR \fIDIR\fR]
+[\fB\-\-apply\fR]
+[\fB\-\-no\-wav\fR]
+[\fB\-q\fR]
+.SH DESCRIPTION
+.B cat-310dx_rename_clips.py
+reads a JSON rename map produced by
+.BR cat-310dx_correlate.py (1)
+and renames \fB.lpc\fR and \fB.wav\fR file pairs in the CAT-310DX clip
+directory.
+.PP
+By default the script runs in
+.B dry-run
+mode, printing what it would do without making any changes.  Pass
+.B \-\-apply
+to perform the actual renames.
+.PP
+The script is idempotent.  If the source file is absent but the destination
+already exists, the pair is counted as already done.  If both exist, the pair
+is skipped.
+.PP
+.B Note:
+clips extracted with the updated
+.B cat-310dx_extract.py
+already use sequence-numbered names (e.g. \fB0001_One.lpc\fR) and do not
+require renaming.  This script is intended for old-style address-named clips
+(e.g. \fB4FED_w01.lpc\fR) extracted with the original script.
+.SH OPTIONS
+.TP
+.BI \-\-map " FILE"
+JSON rename map.  Default: \fBtmp/cat-310dx_rename_map.json\fR.
+.TP
+.BI \-\-dir " DIR"
+Directory containing clips to rename.  Default: \fBcat-310dx_lpc_clips\fR.
+.TP
+.B \-\-apply
+Actually rename files.  Without this flag the script only prints what it
+would do.
+.TP
+.B \-\-no\-wav
+Skip \fB.wav\fR files; rename \fB.lpc\fR files only.
+.TP
+.B \-q
+Suppress per-file output.
+.SH EXAMPLES
+.TP
+Preview renames without making changes:
+.B python3 cat-310dx_rename_clips.py
+.TP
+Apply renames:
+.B python3 cat-310dx_rename_clips.py \-\-apply
+.TP
+Rename LPC files only, apply immediately:
+.B python3 cat-310dx_rename_clips.py \-\-apply \-\-no\-wav
+.TP
+Use a custom map and directory:
+.B python3 cat-310dx_rename_clips.py \-\-map my_map.json \-\-dir clips/ \-\-apply
+.SH WORKFLOW
+.RS
+.nf
+# 1. Produce rename map
+python3 cat-310dx_correlate.py
+
+# 2. Preview
+python3 cat-310dx_rename_clips.py
+
+# 3. Apply
+python3 cat-310dx_rename_clips.py \-\-apply
+.fi
+.RE
+.SH SEE ALSO
+.BR cat-310dx_correlate (1),
+.BR cat-310dx_extract (1)
+.SH AUTHOR
+Kris Kirby, KE4AHR
+.SH COPYRIGHT
+Copyright \(co 2026 Kris Kirby, KE4AHR.
+Licensed under the GNU General Public License v3.0 or later.

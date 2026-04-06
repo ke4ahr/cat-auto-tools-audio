@@ -1,0 +1,103 @@
+.TH CAT-310DX_CORRELATE 1 "2026-04-05" "CAT-310DX Tools 1.1.0" "User Commands"
+.SH NAME
+cat-310dx_correlate \- correlate CAT-310DX LPC clips with CAT-1000 clips by checksum
+.SH SYNOPSIS
+.B python3 cat-310dx_correlate.py
+[\fB\-\-algo\fR \fIALGO\fR]
+[\fB\-\-dx\-dir\fR \fIDIR\fR]
+[\fB\-\-310dx\-wav\-dir\fR \fIDIR\fR]
+[\fB\-\-cat1000\-dir\fR \fIDIR\fR]
+[\fB\-\-cat1000\-wav\-dir\fR \fIDIR\fR]
+[\fB\-o\fR \fIFILE\fR]
+[\fB\-\-map\fR \fIFILE\fR]
+[\fB\-q\fR]
+.SH DESCRIPTION
+.B cat-310dx_correlate.py
+performs two independent byte-for-byte checksum comparisons between
+CAT-310DX clips and CAT-1000 clips:
+.TP
+.B LPC match
+Compares \fB.lpc\fR files in the LPC directories.
+.TP
+.B WAV match
+Compares \fB.wav\fR files in the WAV directories.
+.PP
+Both devices use MSB-first TMS5220-compatible LPC-10.
+A checksum match indicates the same audio recording was used in both devices.
+.PP
+Two output files are produced in
+.B tmp/
+: a CSV correlation table and a JSON rename map
+for use with
+.BR cat-310dx_rename_clips.py (1).
+.SH OPTIONS
+.TP
+.BI \-\-algo " ALGO"
+Hash algorithm: \fBmd5\fR, \fBsha1\fR, or \fBsha256\fR.  Default: \fBsha256\fR.
+.TP
+.BI \-\-dx\-dir " DIR"
+Directory of CAT-310DX \fB.lpc\fR files.  Default: \fBcat-310dx_lpc_clips\fR.
+.TP
+.BI \-\-310dx\-wav\-dir " DIR"
+Directory of CAT-310DX \fB.wav\fR files.  Default: \fBcat-310dx_wav_clips\fR.
+.TP
+.BI \-\-cat1000\-dir " DIR"
+Directory of CAT-1000 \fB.lpc\fR files.  Default: \fBcat-1000_lpc_clips\fR.
+.TP
+.BI \-\-cat1000\-wav\-dir " DIR"
+Directory of CAT-1000 \fB.wav\fR files.  Default: \fBcat-1000_wav_clips\fR.
+.TP
+.BI \-o " FILE"
+Output CSV file.  Default: \fBtmp/cat-310dx_correlation.csv\fR.
+.TP
+.BI \-\-map " FILE"
+Output JSON rename map.  Default: \fBtmp/cat-310dx_rename_map.json\fR.
+.TP
+.B \-q
+Suppress per-file progress output.
+.SH OUTPUT
+.SS tmp/cat-310dx_correlation.csv
+One row per CAT-310DX \fB.lpc\fR file with columns:
+.IR dx_filename ,
+.IR dx_size ,
+.IR algo ,
+.IR lpc_checksum ,
+.IR lpc_match " (yes/no),"
+.IR lpc_cat1000_filename ,
+.IR lpc_cat1000_word_id ,
+.IR lpc_cat1000_label ,
+.IR wav_checksum ,
+.IR wav_match " (yes/no/n\|/a),"
+.IR wav_cat1000_filename ,
+.IR wav_cat1000_word_id ,
+.IR wav_cat1000_label ,
+.IR match_type " (both/lpc_only/wav_only/conflict/none)."
+.SS tmp/cat-310dx_rename_map.json
+Maps old-style address-named basenames (e.g. \fB4FED_w01\fR) to label-tagged
+basenames (e.g. \fB4FED_w01_One\fR) for each matched clip.  Consumed by
+.BR cat-310dx_rename_clips.py (1).
+.SH EXAMPLES
+.TP
+Run with defaults (sha256, standard directories):
+.B python3 cat-310dx_correlate.py
+.TP
+Use MD5:
+.B python3 cat-310dx_correlate.py \-\-algo md5
+.TP
+Custom directories and output files:
+.B python3 cat-310dx_correlate.py \-\-dx\-dir clips/ \-\-cat1000\-dir cat-1000_lpc_clips/ \-o out.csv \-\-map map.json
+.SH NOTES
+Clips extracted with the updated
+.B cat-310dx_extract.py
+already carry sequence-numbered names such as \fB0001_One.lpc\fR and typically
+do not need renaming even if a checksum match is found.  The rename map is
+primarily useful for old-style address-named clips.
+.SH SEE ALSO
+.BR cat-310dx_extract (1),
+.BR cat-310dx_rename_clips (1),
+.BR cat-1000_lpc_export (1)
+.SH AUTHOR
+Kris Kirby, KE4AHR
+.SH COPYRIGHT
+Copyright \(co 2026 Kris Kirby, KE4AHR.
+Licensed under the GNU General Public License v3.0 or later.
